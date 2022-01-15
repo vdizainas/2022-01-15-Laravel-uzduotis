@@ -18,13 +18,32 @@ Route::get('/', function () {
 });
 
 Route::prefix('clients')->group(function() {
-    Route::get('', 'App\Http\Controllers\ClientController@index')->name('clients.index');
-    Route::get('create', 'App\Http\Controllers\ClientController@create')->name('clients.create');
-    Route::get('edit', 'App\Http\Controllers\ClientController@edit')->name('clients.edit');
+    Route::get('', 'App\Http\Controllers\ClientController@index')->name('client.index');
+    Route::get('create', 'App\Http\Controllers\ClientController@create')->name('client.create');    
+    
+    // db
+    Route::post('store', 'App\Http\Controllers\ClientController@store')->name('client.store');
+
+    // update
+    Route::get('edit/{client}', 'App\Http\Controllers\ClientController@edit')->name('client.edit');
+    Route::post('update/{client}', 'App\Http\Controllers\ClientController@update')->name('client.update');
+
+    // delete
+    Route::post('destroy/{client}', 'App\Http\Controllers\ClientController@destroy')->name('client.destroy');
 });
 
 Route::prefix('companies')->group(function() {
     Route::get('', 'App\Http\Controllers\CompanyController@index')->name('companies.index');
     Route::get('create', 'App\Http\Controllers\CompanyController@create')->name('companies.create');
     Route::get('edit', 'App\Http\Controllers\CompanyController@edit')->name('companies.edit');
+    
+    // db
+    Route::post('store', 'App\Http\Controllers\CompanyController@store')->name('companies.store');
+    
+    // update
+    Route::get('edit/{company}', 'App\Http\Controllers\CompanyController@edit')->name('companies.edit');
+    Route::post('update/{company}', 'App\Http\Controllers\CompanyController@update')->name('companies.update');
+
+    // delete
+    Route::post('destroy/{company}', 'App\Http\Controllers\CompanyController@destroy')->name('companies.destroy');
 });
