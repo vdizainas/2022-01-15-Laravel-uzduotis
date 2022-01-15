@@ -30,6 +30,10 @@ Route::prefix('clients')->group(function() {
 
     // delete
     Route::post('destroy/{client}', 'App\Http\Controllers\ClientController@destroy')->name('client.destroy');
+
+    // show
+    Route::get('show/{client}', 'App\Http\Controllers\ClientController@show')->name('client.show');
+
 });
 
 Route::prefix('companies')->group(function() {
@@ -46,4 +50,7 @@ Route::prefix('companies')->group(function() {
 
     // delete
     Route::post('destroy/{company}', 'App\Http\Controllers\CompanyController@destroy')->name('companies.destroy');
+
+    // show
+    Route::get('show/{company}', 'App\Http\Controllers\CompanyController@show')->name('companies.show');
 });

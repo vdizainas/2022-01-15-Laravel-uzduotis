@@ -35,6 +35,7 @@
                 <td>
                   <div class="d-flex">
                     <a class="btn btn-secondary btn-sm me-2" href="{{route('companies.edit', [$company])}}">Edit</a>
+                    <a class="btn btn-secondary btn-sm me-2" href="{{route('companies.show', [$company])}}">Preview</a>
                     <form method="post" action="{{route('companies.destroy', [$company])}}" >
                       <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                       @csrf

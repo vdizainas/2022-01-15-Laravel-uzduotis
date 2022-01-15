@@ -39,6 +39,7 @@
                 <td>
                   <div class="d-flex">
                     <a class="btn btn-secondary btn-sm me-2" href="{{route('client.edit', [$client])}}">Edit</a>
+                    <a class="btn btn-secondary btn-sm me-2" href="{{route('client.show', [$client])}}">Preview</a>
                     <form method="post" action="{{route('client.destroy', [$client])}}" >
                       <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                       @csrf
