@@ -35,7 +35,7 @@
                 <td>
                   <div class="d-flex">
                     <a class="btn btn-secondary btn-sm me-2" href="{{route('companies.edit', [$company])}}">Edit</a>
-                    <a class="btn btn-secondary btn-sm me-2" href="{{route('companies.show', [$company])}}">Preview</a>
+                    <a class="btn btn-outline-secondary btn-sm me-2" href="{{route('companies.show', [$company])}}">Preview</a>
                     <form method="post" action="{{route('companies.destroy', [$company])}}" >
                       <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                       @csrf
@@ -46,11 +46,22 @@
             @endforeach
 
           </table>
+          <div class="text-center">
+            <a class="btn btn-primary" href="{{route('companies.create')}}">Creat new company</a>
+          </div>
 
         </div>
       </div>
     </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">©2022</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="{{route('client.index')}}">Clients</a></li>
+        <li class="list-inline-item"><a href="{{route('companies.index')}}">Companies</a></li>
+      </ul>
+    </footer>
   </div>
-  
+
 </body>
 </html>
