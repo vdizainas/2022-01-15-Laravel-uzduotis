@@ -1,0 +1,1 @@
+<h1>Comanies index</h1>
