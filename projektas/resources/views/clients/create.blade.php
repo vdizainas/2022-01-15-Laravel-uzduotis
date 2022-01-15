@@ -71,8 +71,8 @@
     <footer class="my-5 pt-5 text-muted text-center text-small">
       <p class="mb-1">©2022</p>
       <ul class="list-inline">
-        <li class="list-inline-item"><a href="">Clients</a></li>
-        <li class="list-inline-item"><a href="#">Companies</a></li>
+        <li class="list-inline-item"><a href="{{route('client.index')}}">Clients</a></li>
+        <li class="list-inline-item"><a href="{{route('companies.index')}}">Companies</a></li>
       </ul>
     </footer>
   </div>
